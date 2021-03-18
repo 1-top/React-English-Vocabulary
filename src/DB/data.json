@@ -23,14 +23,14 @@
       "day": 1,
       "eng": "book",
       "kor": "책",
-      "isDone": true
+      "isDone": false
     },
     {
       "id": 3,
       "day": 2,
       "eng": "car",
       "kor": "자동차",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 5,
@@ -73,13 +73,6 @@
       "kor": "원숭이",
       "isDone": false,
       "id": 10
-    },
-    {
-      "day": "4",
-      "eng": "apple",
-      "kor": "사과",
-      "isDone": false,
-      "id": 11
     },
     {
       "day": "3",

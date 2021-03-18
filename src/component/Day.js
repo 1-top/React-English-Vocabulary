@@ -5,7 +5,7 @@ import useFetch from "../hooks/useFetch";
 
 const Day = () => {
   const {day} = useParams();
-  const words = useFetch(`http://localhost:3001/words?word=${day}`);
+  const words = useFetch(`http://localhost:3001/words?day=${day}`);
 
   return (
     <div>
