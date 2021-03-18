@@ -1,18 +1,18 @@
-import dummy from '../DB/data.json';
-import {Button, Table} from "react-bootstrap";
+import {Table} from "react-bootstrap";
 import {useParams} from 'react-router-dom';
 import Word from "./Word";
+import useFetch from "../hooks/useFetch";
 
 const Day = () => {
   const {day} = useParams();
-  const wordList = dummy.words.filter(word => word.day === Number(day));
+  const words = useFetch(`http://localhost:3001/words?word=${day}`);
 
   return (
     <div>
       <h2>Day {day}</h2>
       <Table hover>
         <tbody>
-        {wordList.map(word => (
+        {words.map(word => (
           <Word word={word} key={word.id} />
         ))}
         </tbody>
