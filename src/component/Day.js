@@ -10,7 +10,15 @@ const Day = () => {
   return (
     <div>
       <h2>Day {day}</h2>
-      <Table hover>
+      <Table hover bordered>
+        <thead>
+          <tr>
+            <th>암기</th>
+            <th>단어</th>
+            <th>뜻</th>
+            <th>옵션</th>
+          </tr>
+        </thead>
         <tbody>
         {words.map(word => (
           <Word word={word} key={word.id} />

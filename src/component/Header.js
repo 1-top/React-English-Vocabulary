@@ -6,8 +6,8 @@ const Header = () => {
         <div>
             <Link to='/'><h1>English word</h1></Link>
             <div>
-                <a href="#x">단어 추가</a>
-                <a href="#x">Day 추가</a>
+              <Link to='/create_word'>단어 추가</Link>
+              <Link to='/create_day'>Day 추가</Link>
             </div>
         </div>
     );
