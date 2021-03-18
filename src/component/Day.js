@@ -1,6 +1,7 @@
 import dummy from '../DB/data.json';
-import {Table} from "react-bootstrap";
+import {Button, Table} from "react-bootstrap";
 import {useParams} from 'react-router-dom';
+import Word from "./Word";
 
 const Day = () => {
   const {day} = useParams();
@@ -9,13 +10,10 @@ const Day = () => {
   return (
     <div>
       <h2>Day {day}</h2>
-      <Table>
+      <Table hover>
         <tbody>
         {wordList.map(word => (
-          <tr>
-            <td>{word.eng}</td>
-            <td>{word.kor}</td>
-          </tr>
+          <Word word={word} key={word.id} />
         ))}
         </tbody>
       </Table>
